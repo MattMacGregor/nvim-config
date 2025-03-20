@@ -8,7 +8,7 @@ call plug#begin()
   Plug 'neovim/nvim-lspconfig'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
-  Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 'markdown'}
+  Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
 call plug#end()
 
 lua require('lsp_config')
